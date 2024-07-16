@@ -1,54 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-/* https://zippystarter.com/tools/shadcn-ui-theme-generator */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 228 55% 95%;
-  --foreground: 228 5% 7%;
-  --card: 228 50% 90%;
-  --card-foreground: 228 5% 10%;
-  --popover: 228 55% 95%;
-  --popover-foreground: 228 95% 7%;
-  --primary: 228 93% 38%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 228 30% 70%;
-  --secondary-foreground: 0 0% 0%;
-  --muted: 190 30% 85%;
-  --muted-foreground: 228 5% 35%;
-  --accent: 190 30% 80%;
-  --accent-foreground: 228 5% 10%;
-  --destructive: 0 55% 30%;
-  --destructive-foreground: 228 5% 90%;
-  --border: 228 30% 50%;
-  --input: 228 30% 18%;
-  --ring: 228 93% 38%;
-  --radius: 0.5rem;
-}
-.dark {
-  --background: 228 50% 7%;
-  --foreground: 228 5% 90%;
-  --card: 228 50% 7%;
-  --card-foreground: 228 5% 90%;
-  --popover: 228 50% 5%;
-  --popover-foreground: 228 5% 90%;
-  --primary: 228 93% 38%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 228 30% 10%;
-  --secondary-foreground: 0 0% 100%;
-  --muted: 190 30% 15%;
-  --muted-foreground: 228 5% 60%;
-  --accent: 190 30% 15%;
-  --accent-foreground: 228 5% 90%;
-  --destructive: 0 55% 30%;
-  --destructive-foreground: 228 5% 90%;
-  --border: 228 30% 18%;
-  --input: 228 30% 18%;
-  --ring: 228 93% 38%;
-  --radius: 0.5rem;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.3rem;
+    --chart-1: ;
+    --chart-2: ;
+    --chart-3: ;
+    --chart-4: ;
+    --chart-5: ;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+    --chart-1: ;
+    --chart-2: ;
+    --chart-3: ;
+    --chart-4: ;
+    --chart-5: ;
+  }
 }
 
 @layer base {
@@ -66,4 +76,13 @@ body {
 
 ::selection {
   @apply bg-primary text-primary-foreground;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary));
+  border-radius: 6px;
 }

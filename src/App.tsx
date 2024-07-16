@@ -1,4 +1,4 @@
-import HeroSection from "./components/HeroSection";
+import { ChatArea } from "./components/component/chat-area";
 import ThemeTogglebutton from "./components/ui/theme-togggle";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
       <div className="fixed top-2 right-6">
         <ThemeTogglebutton />
       </div>
-      <HeroSection />
+      <ChatArea />
     </>
   );
 }
