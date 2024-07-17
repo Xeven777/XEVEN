@@ -60,13 +60,13 @@ export function ChatArea() {
   };
 
   return (
-    <div className="flex flex-col max-w-screen-xl mx-auto rounded-xl overflow-hidden border-x min-h-screen">
+    <div className="flex flex-col max-w-screen-xl mx-auto rounded-xl border border-red overflow-hidden max-h-svh h-svh">
       <header className="bg-primary text-primary-foreground p-4 flex items-center gap-4">
         <Avatar className="w-10 h-10">
           <AvatarImage src={robo} />
           <AvatarFallback>X</AvatarFallback>
         </Avatar>
-        <h1 className="text-xl font-bold">ChatBot</h1>
+        <h1 className="text-xl font-bold">XEVEN A.I.</h1>
       </header>
       <main className="flex-1 overflow-auto p-4 flex flex-col gap-4">
         {messages.map((message, index) => (
@@ -85,9 +85,9 @@ export function ChatArea() {
             <div
               className={`${
                 message.sender === "user"
-                  ? "bg-primary text-primary-foreground rounded-tr-none"
-                  : "bg-secondary text-foreground rounded-tl-none"
-              } px-4 py-2 rounded-2xl shadow cursor-pointer hover:translate-x-1 duration-300 transition-all dark:shadow-primary/30 max-w-[70%]`}
+                  ? "bg-primary text-primary-foreground  rounded-tr-none hover:-translate-x-1"
+                  : "bg-secondary text-foreground rounded-tl-none hover:translate-x-1"
+              } px-4 py-2 rounded-2xl shadow cursor-pointer duration-300 transition-all dark:shadow-primary/30 max-w-[75%] md:max-w-[70%]`}
             >
               {message.sender === "user" ? (
                 <p>{message.text}</p>
@@ -120,7 +120,7 @@ export function ChatArea() {
           </div>
         )}
       </main>
-      <div className="bg-muted p-4 flex gap-2">
+      <div className="bg-muted/60 backdrop-blur-md p-4 flex gap-2">
         <Input
           type="text"
           placeholder="Type your message..."
