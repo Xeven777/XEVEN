@@ -63,15 +63,13 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;
   }
 }
 body {
-  /* font-family: "DM Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    Arial, Helvetica, sans, sans-serif; */
   font-family: "Space Grotesk", sans-serif;
 }
 
